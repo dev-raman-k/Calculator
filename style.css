@@ -1,0 +1,67 @@
+* {
+
+    background-color: rgb(255, 119, 119);
+
+    /* background: linear-gradient(135deg, #71b7e6, #9b59b6); */
+}
+
+.container {
+
+    font-size: 40px;
+    text-align: center;
+    margin-top: 50px;
+    color: antiquewhite;
+}
+
+table {
+    /* background-image:url(bg1.jpg); */
+    margin: auto;
+}
+
+input {
+    background-image: url(bg.jpg);
+    /* color: aliceblue; */
+    text-align: right;
+    font-size: 33px;
+    width: 500px;
+    border-color: chartreuse;
+    border: 5px solid red;
+    border-radius: 20px;
+    height: 100px;
+    margin-bottom: 80px;
+    background-color: rgb(0, 255, 76);
+    outline: 4px solid white;
+}
+
+button {
+    font-size: 30px;
+    color: aliceblue;
+    width: 100.2px;
+    height: 70px;
+    border-radius: 12px;
+    background: rgb(4, 0, 255);
+}
+
+button:hover {
+    color: black;
+    background: rgb(176, 175, 255);
+    cursor: pointer;
+    font-size: 40px;
+}
+
+button:active {
+    color: chartreuse;
+    background-color: purple;
+    font-size: 40px;
+}
+
+.calc {
+    background-color: rgb(255, 0, 0);
+    padding: 30px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+#Heading {
+    font-size: 70px;
+}
