@@ -83,7 +83,7 @@ for (item of btn) {
         else if (btnText == "!") {
             fact();
         }
-        else if (btnText == "abs") {
+        else if (btnText == "ABS") {
             abs();
         }
         else if (btnText == "LCM") {
@@ -91,6 +91,9 @@ for (item of btn) {
         }
         else if (btnText == "HCF") {
             hcf();
+        }
+        else if(btnText == "10^") {
+            power_of_10();
         }
         else {
             screenValue += btnText;
@@ -152,6 +155,11 @@ function tanI() {
 }
 function pow() {
     screenValue = '= ' + Math.pow(screen.value, 2);
+    screen.value = screenValue;
+}
+function power_of_10()
+{
+    screenValue = '= ' + Math.pow(10, screen.value);
     screen.value = screenValue;
 }
 function pown() {
