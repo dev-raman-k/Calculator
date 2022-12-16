@@ -40,6 +40,7 @@ button {
     height: 70px;
     border-radius: 12px;
     background: rgb(4, 0, 255);
+    font-family: 'Times New Roman', Times, serif;
 }
 
 button:hover {
