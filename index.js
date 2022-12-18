@@ -23,7 +23,11 @@ for (item of btn) {
             screen.value = screenValue;
         }
         else if (btnText == '⌫') {
-            screenValue = screenValue.slice(0, -1);
+            if(screen.value == "Infinity")
+            screenValue = '';
+            else
+            screenValue = screen.value.slice(0, -1);
+            
             screen.value = screenValue;
         }
         else if (btnText == '=') {
@@ -103,75 +107,65 @@ for (item of btn) {
 }
 function Dsin() {
     var x = eval(screen.value);
-    screenValue = 'sin(' + x + '°) ';
     x = x * Math.PI / 180;
-    screenValue += '= ' + Math.sin(x);
+    screenValue = Math.sin(x);
     screen.value = screenValue;
 }
 function Dcos() {
     var x = eval(screen.value);
-    screenValue = 'cos(' + x + '°) ';
     x = x * Math.PI / 180;
-    screenValue += '= ' + Math.cos(x);
+    screenValue = Math.cos(x);
     screen.value = screenValue;
 }
 function Dtan() {
     var x = eval(screen.value);
-    screenValue = 'tan(' + x + '°) ';
     x = x * Math.PI / 180;
-    screenValue += '= ' + Math.tan(x);
+    screenValue = Math.tan(x);
     screen.value = screenValue;
 }
 function Rsin() {
-    screenValue = 'sin(' + screen.value + ' rad) ';
-    screenValue += '= ' + Math.sin(screen.value);
+    screenValue = Math.sin(eval(screen.value));
     screen.value = screenValue;
 }
 function Rcos() {
-    screenValue = 'cos(' + screen.value + ' rad) ';
-    screenValue += '= ' + Math.cos(screen.value);
+    screenValue = Math.cos(eval(screen.value));
     screen.value = screenValue;
 }
 function Rtan() {
-    screenValue = 'tan(' + screen.value + ' rad) ';
-    screenValue += '= ' + Math.tan(screen.value);
+    screenValue = Math.tan(eval(screen.value));
     screen.value = screenValue;
 }
 function sinI() {
-    screenValue = 'sin-¹(' + screen.value + ') ';
-    screenValue += '= ' + Math.asin(screen.value);
+    screenValue = Math.asin(eval(screen.value));
     screen.value = screenValue;
 }
 function cosI() {
-    
-    screenValue = 'cos-¹(' + screen.value + ') ';
-    screenValue += '= ' + Math.acos(screen.value);
+    screenValue = Math.acos(eval(screen.value));
     screen.value = screenValue;
 }
 function tanI() {
-    screenValue = 'tan-¹(' + screen.value + ') ';
-    screenValue += '= ' + Math.atan(screen.value);
+    screenValue = Math.atan(eval(screen.value));
     screen.value = screenValue;
 }
 function pow() {
-    screenValue = '= ' + Math.pow(screen.value, 2);
+    screenValue = Math.pow(eval(screen.value), 2);
     screen.value = screenValue;
 }
 function power_of_10()
 {
-    screenValue = '= ' + Math.pow(10, screen.value);
+    screenValue = Math.pow(10, eval(screen.value));
     screen.value = screenValue;
 }
 function pown() {
-    i = screen.value;
+    i = eval(screen.value);
     j = prompt("power = ");
-    screenValue = '= ' + Math.pow(i, j);
+    screenValue = Math.pow(i, j);
     screen.value = screenValue;
 }
 function fact() {
     var i, num, f;
     f = 1;
-    num = screen.value;
+    num = eval(screen.value);
     for (i = 1; i <= num; i++) {
         f = f * i
     }
@@ -180,24 +174,24 @@ function fact() {
     screen.value = screenValue;
 }
 function sqrt() {
-    screenValue = '= ' + Math.sqrt(screen.value, 2);
+    screenValue = Math.sqrt(eval(screen.value), 2);
     screen.value = screenValue;
 }
 function ln() {
-    screenValue = '= ' + Math.log(screen.value);
+    screenValue = Math.log(eval(screen.value));
     screen.value = screenValue;
 }
 
 function log() {
-    screenValue = '= ' + (Math.log(screen.value)) / Math.log(10);
+    screenValue = (Math.log(eval(screen.value))) / Math.log(10);
     screen.value = screenValue;
 }
 function pi() {
-    screenValue += 3.14159265359;
+    screenValue = 3.14159265359;
     screen.value = screenValue;
 }
 function exp() {
-    screenValue += 2.718281828459045;
+    screenValue = 2.718281828459045;
     screen.value = screenValue;
 }
 function abs() {
@@ -205,9 +199,9 @@ function abs() {
     screen.value = screenValue;
 }
 function lcm() {
-    i = screen.value;
+    i = eval(screen.value);
     j = prompt("2nd Number = ");
-    screenValue = '= ' + lcm_two_numbers(i,j);
+    screenValue = lcm_two_numbers(i,j);
     screen.value = screenValue;
 }
 
@@ -223,9 +217,9 @@ function lcm_two_numbers(num1, num2)
 }
 
 function hcf() {
-    i = screen.value;
+    i = eval(screen.value);
     j = prompt("2nd Number = ");
-    screenValue = '= ' + gcd_two_numbers(i, j);
+    screenValue = gcd_two_numbers(i, j);
     screen.value = screenValue;
 }
 function gcd_two_numbers(x, y) {
