@@ -23,7 +23,7 @@ for (item of btn) {
             screen.value = screenValue;
         }
         else if (btnText == '⌫') {
-            if(screen.value == "Infinity")
+            if(screen.value == "Infinity" || screen.value == "true" || screen.value == "false" || screen.value == "NaN")
             screenValue = '';
             else
             screenValue = screen.value.slice(0, -1);
@@ -81,7 +81,7 @@ for (item of btn) {
         else if (btnText == 'e') {
             exp();
         }
-        else if (btnText == "^") {
+        else if (btnText == "pow") {
             pown();
         }
         else if (btnText == "!") {
@@ -99,7 +99,29 @@ for (item of btn) {
         else if(btnText == "10^") {
             power_of_10();
         }
-        else {
+        else if(btnText=="++")
+        {
+           var i = eval(screen.value);
+           i++;
+           screenValue = i;
+           screen.value = screenValue;
+        }
+        else if(btnText=="--")
+        {
+           var i = eval(screen.value);
+           i--;
+           screenValue = i;
+           screen.value = screenValue;
+        }
+        else if(btnText=="U-")
+        {
+           var i = eval(screen.value);
+           i = -i;
+           screenValue = i;
+           screen.value = screenValue;
+        }
+        else 
+        {
             screenValue += btnText;
             screen.value = screenValue;
         }
@@ -187,7 +209,7 @@ function log() {
     screen.value = screenValue;
 }
 function pi() {
-    screenValue = 3.14159265359;
+    screenValue += 3.14159265359;
     screen.value = screenValue;
 }
 function exp() {
