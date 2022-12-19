@@ -60,8 +60,10 @@ for (item of btn) {
         else if (btnText == "tan-¹") {
             tanI();
         }
-        else if (btnText == 'x²') {
-            pow();
+        else if (btnText == 'pow') {
+            btnText = '**';
+            screenValue += btnText;
+            screen.value = screenValue;
         }
         else if (btnText == 'x♂') {
             pown();
@@ -81,8 +83,8 @@ for (item of btn) {
         else if (btnText == 'e') {
             exp();
         }
-        else if (btnText == "pow") {
-            pown();
+        else if (btnText == "x²") {
+            pow();
         }
         else if (btnText == "!") {
             fact();
@@ -178,10 +180,9 @@ function power_of_10()
     screenValue = Math.pow(10, eval(screen.value));
     screen.value = screenValue;
 }
-function pown() {
+function pow() {
     i = eval(screen.value);
-    j = prompt("power = ");
-    screenValue = Math.pow(i, j);
+    screenValue = Math.pow(i, 2);
     screen.value = screenValue;
 }
 function fact() {
